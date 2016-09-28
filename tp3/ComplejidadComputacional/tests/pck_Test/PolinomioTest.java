@@ -12,10 +12,10 @@ import java.io.File;
 import java.util.Calendar;
 
 public class PolinomioTest {
-	
-	@Test
+	//EVALUAR M SUCESIVAS
+	/*@Test
 	public void casoPolinomioIncompletoConEvaluarMSucesivas(){
-		Polinomio pol1 = new Polinomio("Caso0.0.PolinomioIncompleto.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.0.PolinomioIncompleto.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarMSucesivas(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -23,7 +23,59 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.0.PolinomioIncompleto.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.0.PolinomioIncompleto.out"));
+			double resEsperado = sc.nextDouble();
+			sc.useLocale(Locale.ENGLISH);
+			Assert.assertTrue(resActual == resEsperado);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			try {
+				sc.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}	
+		
+	}
+	
+	@Test
+	public void casoPolinomio1ConEvaluarMSucesivas(){
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\polinomioLargo1.in");
+		Calendar tIni = new GregorianCalendar();
+		double resActual = pol1.evaluarMSucesivas(0.01);
+		Calendar tFin = new GregorianCalendar();
+		System.out.println("T.Ejecución casoPolinomio1ConEvaluarMSucesivas:"+(tFin.getTimeInMillis()-tIni.getTimeInMillis()));
+		
+		Scanner sc = null;
+		try {
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\polinomioLargo1.out"));
+			double resEsperado = sc.nextDouble();
+			sc.useLocale(Locale.ENGLISH);
+			Assert.assertTrue(resActual == resEsperado);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			try {
+				sc.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}	
+		
+	}
+	
+	@Test
+	public void casoPolinomio2ConEvaluarMSucesivas(){
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\polinomioLargo2.in");
+		Calendar tIni = new GregorianCalendar();
+		double resActual = pol1.evaluarMSucesivas(0.01);
+		Calendar tFin = new GregorianCalendar();
+		System.out.println("T.Ejecución casoPolinomio2ConEvaluarMSucesivas:"+(tFin.getTimeInMillis()-tIni.getTimeInMillis()));
+		
+		Scanner sc = null;
+		try {
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\polinomioLargo2.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -39,8 +91,35 @@ public class PolinomioTest {
 		
 	}
 	@Test
+	public void casoPolinomio3ConEvaluarMSucesivas(){
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\polinomioLargo3.in");
+		Calendar tIni = new GregorianCalendar();
+		double resActual = pol1.evaluarMSucesivas(0.01);
+		Calendar tFin = new GregorianCalendar();
+		System.out.println("T.Ejecución casoPolinomio3ConEvaluarMSucesivas:"+(tFin.getTimeInMillis()-tIni.getTimeInMillis()));
+		
+		Scanner sc = null;
+		try {
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\polinomioLargo3.out"));
+			double resEsperado = sc.nextDouble();
+			sc.useLocale(Locale.ENGLISH);
+			Assert.assertTrue(resActual == resEsperado);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			try {
+				sc.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}	
+		
+	}
+	
+	//EvaluarRecursiva
+	@Test
 	public void casoPolinomioIncompletoConevaluarRecursiva(){
-		Polinomio pol1 = new Polinomio("Caso0.0.PolinomioIncompleto.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.0.PolinomioIncompleto.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarRecursiva(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -48,7 +127,33 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.0.PolinomioIncompleto.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.0.PolinomioIncompleto.out"));
+			double resEsperado = sc.nextDouble();
+			sc.useLocale(Locale.ENGLISH);
+			Assert.assertTrue(resActual == resEsperado);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			try {
+				sc.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}	
+		
+	}
+	
+	@Test
+	public void casoPolinomio1ConevaluarRecursiva(){
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\polinomioLargo1.in");
+		Calendar tIni = new GregorianCalendar();
+		double resActual = pol1.evaluarRecursiva(0.01);
+		Calendar tFin = new GregorianCalendar();
+		System.out.println("T.Ejecución casoPolinomio1ConevaluarRecursiva:"+(tFin.getTimeInMillis()-tIni.getTimeInMillis()));
+		
+		Scanner sc = null;
+		try {
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\polinomioLargo1.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -64,8 +169,59 @@ public class PolinomioTest {
 		
 	}
 	@Test
+	public void casoPolinomio2ConevaluarRecursiva(){
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\polinomioLargo2.in");
+		Calendar tIni = new GregorianCalendar();
+		double resActual = pol1.evaluarRecursiva(0.01);
+		Calendar tFin = new GregorianCalendar();
+		System.out.println("T.Ejecución casoPolinomio2ConevaluarRecursiva:"+(tFin.getTimeInMillis()-tIni.getTimeInMillis()));
+		
+		Scanner sc = null;
+		try {
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\polinomioLargo2.out"));
+			double resEsperado = sc.nextDouble();
+			sc.useLocale(Locale.ENGLISH);
+			Assert.assertTrue(resActual == resEsperado);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			try {
+				sc.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}	
+		
+	}
+	@Test
+	public void casoPolinomio3ConevaluarRecursiva(){
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\polinomioLargo3.in");
+		Calendar tIni = new GregorianCalendar();
+		double resActual = pol1.evaluarRecursiva(0.01);
+		Calendar tFin = new GregorianCalendar();
+		System.out.println("T.Ejecución casoPolinomio3ConevaluarRecursiva:"+(tFin.getTimeInMillis()-tIni.getTimeInMillis()));
+		
+		Scanner sc = null;
+		try {
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\polinomioLargo3.out"));
+			double resEsperado = sc.nextDouble();
+			sc.useLocale(Locale.ENGLISH);
+			Assert.assertTrue(resActual == resEsperado);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			try {
+				sc.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}	
+		
+	}
+	
+	@Test
 	public void casoPolinomioIncompletoConevaluarRecursivaPar(){
-		Polinomio pol1 = new Polinomio("Caso0.0.PolinomioIncompleto.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.0.PolinomioIncompleto.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarRecursivaPar(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -73,7 +229,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.0.PolinomioIncompleto.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.0.PolinomioIncompleto.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -90,7 +246,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioIncompletoConevaluarProgDinamica(){
-		Polinomio pol1 = new Polinomio("Caso0.0.PolinomioIncompleto.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.0.PolinomioIncompleto.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarProgDinamica(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -98,7 +254,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.0.PolinomioIncompleto.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.0.PolinomioIncompleto.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -115,7 +271,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioIncompletoConevaluarMejorada(){
-		Polinomio pol1 = new Polinomio("Caso0.0.PolinomioIncompleto.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.0.PolinomioIncompleto.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarMejorada(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -123,7 +279,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.0.PolinomioIncompleto.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.0.PolinomioIncompleto.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -140,7 +296,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioIncompletoConevaluarPow(){
-		Polinomio pol1 = new Polinomio("Caso0.0.PolinomioIncompleto.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.0.PolinomioIncompleto.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarPow(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -148,7 +304,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.0.PolinomioIncompleto.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.0.PolinomioIncompleto.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -165,7 +321,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioIncompletoConevaluarHorner(){
-		Polinomio pol1 = new Polinomio("Caso0.0.PolinomioIncompleto.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.0.PolinomioIncompleto.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarHorner(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -173,7 +329,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.0.PolinomioIncompleto.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.0.PolinomioIncompleto.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -190,7 +346,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioConTerminoIndependienteConEvaluarMSucesivas(){
-		Polinomio pol1 = new Polinomio("Caso0.1.PolinomioConTerminoIndependiente.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.1.PolinomioConTerminoIndependiente.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarMSucesivas(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -198,7 +354,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.1.PolinomioConTerminoIndependiente.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.1.PolinomioConTerminoIndependiente.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -215,7 +371,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioConTerminoIndependienteConevaluarRecursiva(){
-		Polinomio pol1 = new Polinomio("Caso0.1.PolinomioConTerminoIndependiente.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.1.PolinomioConTerminoIndependiente.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarRecursiva(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -223,7 +379,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.1.PolinomioConTerminoIndependiente.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.1.PolinomioConTerminoIndependiente.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -240,7 +396,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioConTerminoIndependienteConevaluarRecursivaPar(){
-		Polinomio pol1 = new Polinomio("Caso0.1.PolinomioConTerminoIndependiente.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.1.PolinomioConTerminoIndependiente.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarRecursivaPar(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -248,7 +404,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.1.PolinomioConTerminoIndependiente.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.1.PolinomioConTerminoIndependiente.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -265,7 +421,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioConTerminoIndependienteConevaluarProgDinamica(){
-		Polinomio pol1 = new Polinomio("Caso0.1.PolinomioConTerminoIndependiente.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.1.PolinomioConTerminoIndependiente.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarProgDinamica(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -273,7 +429,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.1.PolinomioConTerminoIndependiente.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.1.PolinomioConTerminoIndependiente.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -290,7 +446,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioConTerminoIndependienteConevaluarMejorada(){
-		Polinomio pol1 = new Polinomio("Caso0.1.PolinomioConTerminoIndependiente.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.1.PolinomioConTerminoIndependiente.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarMejorada(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -298,7 +454,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.1.PolinomioConTerminoIndependiente.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.1.PolinomioConTerminoIndependiente.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -315,7 +471,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioConTerminoIndependienteConevaluarPow(){
-		Polinomio pol1 = new Polinomio("Caso0.1.PolinomioConTerminoIndependiente.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.1.PolinomioConTerminoIndependiente.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarPow(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -323,7 +479,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.1.PolinomioConTerminoIndependiente.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.1.PolinomioConTerminoIndependiente.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -340,7 +496,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioConTerminoIndependienteConevaluarHorner(){
-		Polinomio pol1 = new Polinomio("Caso0.1.PolinomioConTerminoIndependiente.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.1.PolinomioConTerminoIndependiente.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarHorner(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -348,7 +504,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.1.PolinomioConTerminoIndependiente.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.1.PolinomioConTerminoIndependiente.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -365,7 +521,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioEvaluado0ConEvaluarMSucesivas(){
-		Polinomio pol1 = new Polinomio("Caso0.2.PolinomioEvaluado0.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.2.PolinomioEvaluado0.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarMSucesivas(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -373,7 +529,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.2.PolinomioEvaluado0.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.2.PolinomioEvaluado0.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -390,7 +546,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioEvaluado0ConevaluarRecursiva(){
-		Polinomio pol1 = new Polinomio("Caso0.2.PolinomioEvaluado0.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.2.PolinomioEvaluado0.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarRecursiva(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -398,7 +554,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.2.PolinomioEvaluado0.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.2.PolinomioEvaluado0.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -415,7 +571,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioEvaluado0ConevaluarRecursivaPar(){
-		Polinomio pol1 = new Polinomio("Caso0.2.PolinomioEvaluado0.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.2.PolinomioEvaluado0.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarRecursivaPar(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -423,7 +579,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.2.PolinomioEvaluado0.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\EvaluarRecursivaParYMejorada.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -440,7 +596,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioEvaluado0ConevaluarProgDinamica(){
-		Polinomio pol1 = new Polinomio("Caso0.2.PolinomioEvaluado0.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.2.PolinomioEvaluado0.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarProgDinamica(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -448,7 +604,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.2.PolinomioEvaluado0.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.2.PolinomioEvaluado0.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -465,7 +621,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioEvaluado0ConevaluarMejorada(){
-		Polinomio pol1 = new Polinomio("Caso0.2.PolinomioEvaluado0.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.2.PolinomioEvaluado0.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarMejorada(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -473,7 +629,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.2.PolinomioEvaluado0.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\EvaluarRecursivaParYMejorada.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -490,7 +646,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioEvaluado0ConevaluarPow(){
-		Polinomio pol1 = new Polinomio("Caso0.2.PolinomioEvaluado0.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.2.PolinomioEvaluado0.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarPow(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -498,7 +654,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.2.PolinomioEvaluado0.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.2.PolinomioEvaluado0.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -515,7 +671,7 @@ public class PolinomioTest {
 	}
 	@Test
 	public void casoPolinomioEvaluado0ConevaluarHorner(){
-		Polinomio pol1 = new Polinomio("Caso0.3.PolinomioEvaluado0.in");
+		Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\Caso0.2.PolinomioEvaluado0.in");
 		Calendar tIni = new GregorianCalendar();
 		double resActual = pol1.evaluarHorner(0.01);
 		Calendar tFin = new GregorianCalendar();
@@ -523,7 +679,7 @@ public class PolinomioTest {
 		
 		Scanner sc = null;
 		try {
-			sc = new Scanner(new File("Caso0.3.PolinomioEvaluado0.out"));
+			sc = new Scanner(new File(".\\Preparacion de Prueba\\Lote de Prueba\\SalidaEsperada\\Caso0.2.PolinomioEvaluado0.out"));
 			double resEsperado = sc.nextDouble();
 			sc.useLocale(Locale.ENGLISH);
 			Assert.assertTrue(resActual == resEsperado);
@@ -536,6 +692,16 @@ public class PolinomioTest {
 				e2.printStackTrace();
 			}
 		}	
-		
+	}*/
+	
+	@Test
+	public void medirTiempo(){
+		for (int i =1 ; i <= 8; i++){
+			Polinomio pol1 = new Polinomio(".\\Preparacion de Prueba\\Lote de Prueba\\Entrada\\pruebaTiempo" + i + ".in");
+			Calendar tIni = new GregorianCalendar();
+			double resActual = pol1.evaluarHorner(0.01);
+			Calendar tFin = new GregorianCalendar();
+			System.out.println("T.Ejecución archivo " + i + ":"+(tFin.getTimeInMillis()-tIni.getTimeInMillis()));
+		}
 	}
 }

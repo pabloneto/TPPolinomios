@@ -37,7 +37,7 @@ public class Polinomio {
 		}
 	}
 
-	public double evaluarMSucesivas (double x ) { 
+	public double evaluarMSucesivas (double x ) { // O(n³)
 		double acum = 0;
 		for (int i = 0; i < this.coeficientes.length; i++) {
 			if (this.coeficientes.length != 0){
@@ -51,7 +51,7 @@ public class Polinomio {
 		return acum;
 	}
 
-	public double evaluarRecursiva (double x ) {
+	public double evaluarRecursiva (double x ) { // O(n³)
 		double acum = 0;
 		for (int i = 0; i < coeficientes.length; i++) {
 			acum+=(this.coeficientes[i]*this.potencia(x, i));
@@ -69,7 +69,7 @@ public class Polinomio {
 			res =1;
 		return res;
 	}
-	public double evaluarRecursivaPar (double x ) {
+	public double evaluarRecursivaPar (double x ) { // O(n³)
 		double acum = 0;
 		for (int i = 0; i < coeficientes.length; i++) 
 			acum+=(this.coeficientes[i]*this.potenciaPar(x, i));
@@ -81,13 +81,13 @@ public class Polinomio {
 			if (n==0)
 				res =1;
 			else
-				res = potencia(x*x,n-1);
+				res = potenciaPar(x*x,n-1);
 		else
-			res = x*potencia(x,n-1);
+			res = x*potenciaPar(x,n-1);
 		return res;
 	}
 
-	public double evaluarProgDinamica (double x ) {
+	public double evaluarProgDinamica (double x ) { // O(n)
 		double acum = 0;
 		double [] vectorPotencia= new double [this.coeficientes.length];
 		for (int i = 0; i < vectorPotencia.length; i++) {
@@ -101,7 +101,7 @@ public class Polinomio {
 		return acum;
 	}
 
-	public double evaluarMejorada (double x ) {
+	public double evaluarMejorada (double x ) { // O(n)
 		double acum = 0;
 		double [] vectorPotencia= new double [this.coeficientes.length];
 		for (int i = 0; i < vectorPotencia.length; i++) {
@@ -115,14 +115,14 @@ public class Polinomio {
 		return acum;
 	}
 
-	public double evaluarPow (double x ) {
+	public double evaluarPow (double x ) { // O(1)
 		double acum = 0;
 		for (int i = 0; i < coeficientes.length; i++) {
 			acum+= this.coeficientes[i]*Math.pow(x, i);
 		}
 		return acum;
 	}
-	public double evaluarHorner(double x){
+	public double evaluarHorner(double x){ // O(n)
 		double acum= 0;
         for(int i = this.coeficientes.length-1; i>=0;i--){
             acum = acum* x + this.coeficientes[i];
